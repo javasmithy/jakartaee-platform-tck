@@ -350,13 +350,25 @@
 
     <profiles>
         <profile>
-            <id>full</id>
+            <id>full-dist</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <glassfish-artifact-id>glassfish</glassfish-artifact-id>
             </properties>
+        </profile>
+        <profile>
+            <id>web-dist</id>
+            <properties>
+                <glassfish-artifact-id>web</glassfish-artifact-id>
+            </properties>
+        </profile>
+        <profile>
+            <id>full</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <dependencies>
                 <dependency>
                     <groupId>jakarta.tck.arquillian</groupId>
@@ -411,9 +423,6 @@
         </profile>
         <profile>
             <id>web</id>
-            <properties>
-                <glassfish-artifact-id>web</glassfish-artifact-id>
-            </properties>
             <dependencies>
                 <dependency>
                     <groupId>jakarta.tck.arquillian</groupId>
